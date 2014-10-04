@@ -12,7 +12,7 @@
 	<dict>
 		<key>01529694042D8C98B30DC19F4D4370A306884FE4</key>
 		<string>https://github.com/John-Lluch/SWRevealViewController.git</string>
-		<key>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</key>
+		<key>A305836286C10D6F874DB7ABF108EFADA2B74173</key>
 		<string>https://github.com/mexiQQ/VReader-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -21,7 +21,7 @@
 	<dict>
 		<key>01529694042D8C98B30DC19F4D4370A306884FE4</key>
 		<string>../../../SWRevealViewController</string>
-		<key>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</key>
+		<key>A305836286C10D6F874DB7ABF108EFADA2B74173</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -29,7 +29,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</string>
+	<string>A305836286C10D6F874DB7ABF108EFADA2B74173</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</string>
+			<string>A305836286C10D6F874DB7ABF108EFADA2B74173</string>
 			<key>IDESourceControlWCCName</key>
 			<string>VReader-iOS</string>
 		</dict>
