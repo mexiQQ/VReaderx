@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF45B29419DD346900FC5E77 /* FrontTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45B29319DD346900FC5E77 /* FrontTableViewCell.m */; };
+		AF611FA519DD0C3500986CE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611F9E19DD0C3500986CE1 /* AppDelegate.m */; };
+		AF611FA619DD0C3500986CE1 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611FA019DD0C3500986CE1 /* ColorViewController.m */; };
+		AF611FA719DD0C3500986CE1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611FA219DD0C3500986CE1 /* MapViewController.m */; };
+		AF611FA819DD0C3500986CE1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611FA419DD0C3500986CE1 /* MenuViewController.m */; };
+		AF611FB919DD0C6200986CE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF611FB319DD0C6200986CE1 /* InfoPlist.strings */; };
+		AF611FBA19DD0C6200986CE1 /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF611FB519DD0C6200986CE1 /* MainStoryboard-iPad.storyboard */; };
+		AF611FBB19DD0C6200986CE1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF611FB719DD0C6200986CE1 /* MainStoryboard.storyboard */; };
+		AF611FC419DD0C8000986CE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF611FBC19DD0C8000986CE1 /* Default-568h@2x.png */; };
+		AF611FC519DD0C8000986CE1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF611FBD19DD0C8000986CE1 /* Default.png */; };
+		AF611FC619DD0C8000986CE1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF611FBE19DD0C8000986CE1 /* Default@2x.png */; };
+		AF611FC719DD0C8000986CE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611FBF19DD0C8000986CE1 /* main.m */; };
+		AF611FC819DD0C8000986CE1 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AF611FC019DD0C8000986CE1 /* reveal-icon.png */; };
+		AF611FC919DD0C8000986CE1 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF611FC119DD0C8000986CE1 /* reveal-icon@2x.png */; };
+		AF611FCA19DD0C8000986CE1 /* VReader-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF611FC219DD0C8000986CE1 /* VReader-Info.plist */; };
+		AF61200119DD11FC00986CE1 /* FrontTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61200019DD11FC00986CE1 /* FrontTableViewController.m */; };
+		AF61203D19DD1C0400986CE1 /* 21-skull.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61202F19DD1C0400986CE1 /* 21-skull.png */; };
+		AF61203E19DD1C0400986CE1 /* 21-skull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203019DD1C0400986CE1 /* 21-skull@2x.png */; };
+		AF61203F19DD1C0400986CE1 /* 24-gift.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203119DD1C0400986CE1 /* 24-gift.png */; };
+		AF61204019DD1C0400986CE1 /* 24-gift@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203219DD1C0400986CE1 /* 24-gift@2x.png */; };
+		AF61204119DD1C0400986CE1 /* 28-star.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203319DD1C0400986CE1 /* 28-star.png */; };
+		AF61204219DD1C0400986CE1 /* 28-star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203419DD1C0400986CE1 /* 28-star@2x.png */; };
+		AF61204319DD1C0400986CE1 /* 29-heart.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203519DD1C0400986CE1 /* 29-heart.png */; };
+		AF61204419DD1C0400986CE1 /* 29-heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203619DD1C0400986CE1 /* 29-heart@2x.png */; };
+		AF61204519DD1C0400986CE1 /* 31-ipod.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203719DD1C0400986CE1 /* 31-ipod.png */; };
+		AF61204619DD1C0400986CE1 /* 31-ipod@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203819DD1C0400986CE1 /* 31-ipod@2x.png */; };
+		AF61204719DD1C0400986CE1 /* 38-airplane.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203919DD1C0400986CE1 /* 38-airplane.png */; };
+		AF61204819DD1C0400986CE1 /* 38-airplane@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61203A19DD1C0400986CE1 /* 38-airplane@2x.png */; };
+		AF61204D19DD200D00986CE1 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61204C19DD200D00986CE1 /* SidebarViewController.m */; };
+		AF61205119DD2B4000986CE1 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205019DD2B4000986CE1 /* libz.1.2.5.dylib */; };
+		AF61205319DD2B5500986CE1 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205219DD2B5500986CE1 /* libicucore.dylib */; };
+		AF61205419DD2B7900986CE1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB86AF169E42B600A0A1A8 /* MapKit.framework */; };
+		AF61205519DD2B8000986CE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB8669169E2D8B00A0A1A8 /* UIKit.framework */; };
+		AF61205619DD2B8B00986CE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866B169E2D8B00A0A1A8 /* Foundation.framework */; };
+		AF61205719DD2B9300986CE1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */; };
+		AF61205919DD2BAB00986CE1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205819DD2BAB00986CE1 /* CoreLocation.framework */; };
+		AF61205B19DD2BB600986CE1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205A19DD2BB600986CE1 /* Security.framework */; };
+		AF61205D19DD2BC300986CE1 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205C19DD2BC300986CE1 /* MobileCoreServices.framework */; };
+		AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */; };
+		AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206019DD2BD900986CE1 /* CoreTelephony.framework */; };
+		AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */; };
+		AF61206519DD2C7000986CE1 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206419DD2C7000986CE1 /* BmobSDK.framework */; };
+		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01FB8665169E2D8B00A0A1A8 /* VReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01FB8669169E2D8B00A0A1A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		01FB866B169E2D8B00A0A1A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		01FB86AF169E42B600A0A1A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AF45B29219DD346900FC5E77 /* FrontTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		AF45B29319DD346900FC5E77 /* FrontTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		AF611F9D19DD0C3500986CE1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = VReader/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		AF611F9E19DD0C3500986CE1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = VReader/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		AF611F9F19DD0C3500986CE1 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorViewController.h; path = VReader/ColorViewController.h; sourceTree = SOURCE_ROOT; };
+		AF611FA019DD0C3500986CE1 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorViewController.m; path = VReader/ColorViewController.m; sourceTree = SOURCE_ROOT; };
+		AF611FA119DD0C3500986CE1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = VReader/MapViewController.h; sourceTree = SOURCE_ROOT; };
+		AF611FA219DD0C3500986CE1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = VReader/MapViewController.m; sourceTree = SOURCE_ROOT; };
+		AF611FA319DD0C3500986CE1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = VReader/MenuViewController.h; sourceTree = SOURCE_ROOT; };
+		AF611FA419DD0C3500986CE1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = VReader/MenuViewController.m; sourceTree = SOURCE_ROOT; };
+		AF611FB419DD0C6200986CE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = VReader/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		AF611FB619DD0C6200986CE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "VReader/en.lproj/MainStoryboard-iPad.storyboard"; sourceTree = SOURCE_ROOT; };
+		AF611FB819DD0C6200986CE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = VReader/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		AF611FBC19DD0C8000986CE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "VReader/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		AF611FBD19DD0C8000986CE1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = VReader/Default.png; sourceTree = SOURCE_ROOT; };
+		AF611FBE19DD0C8000986CE1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "VReader/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		AF611FBF19DD0C8000986CE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VReader/main.m; sourceTree = SOURCE_ROOT; };
+		AF611FC019DD0C8000986CE1 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon.png"; path = "VReader/reveal-icon.png"; sourceTree = SOURCE_ROOT; };
+		AF611FC119DD0C8000986CE1 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reveal-icon@2x.png"; path = "VReader/reveal-icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		AF611FC219DD0C8000986CE1 /* VReader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VReader-Info.plist"; path = "VReader/VReader-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AF611FC319DD0C8000986CE1 /* VReader-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VReader-Prefix.pch"; path = "VReader/VReader-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		AF611FFF19DD11FC00986CE1 /* FrontTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontTableViewController.h; sourceTree = SOURCE_ROOT; };
+		AF61200019DD11FC00986CE1 /* FrontTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontTableViewController.m; sourceTree = SOURCE_ROOT; };
+		AF61202F19DD1C0400986CE1 /* 21-skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "21-skull.png"; sourceTree = "<group>"; };
+		AF61203019DD1C0400986CE1 /* 21-skull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "21-skull@2x.png"; sourceTree = "<group>"; };
+		AF61203119DD1C0400986CE1 /* 24-gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "24-gift.png"; sourceTree = "<group>"; };
+		AF61203219DD1C0400986CE1 /* 24-gift@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "24-gift@2x.png"; sourceTree = "<group>"; };
+		AF61203319DD1C0400986CE1 /* 28-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "28-star.png"; sourceTree = "<group>"; };
+		AF61203419DD1C0400986CE1 /* 28-star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "28-star@2x.png"; sourceTree = "<group>"; };
+		AF61203519DD1C0400986CE1 /* 29-heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart.png"; sourceTree = "<group>"; };
+		AF61203619DD1C0400986CE1 /* 29-heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-heart@2x.png"; sourceTree = "<group>"; };
+		AF61203719DD1C0400986CE1 /* 31-ipod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "31-ipod.png"; sourceTree = "<group>"; };
+		AF61203819DD1C0400986CE1 /* 31-ipod@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "31-ipod@2x.png"; sourceTree = "<group>"; };
+		AF61203919DD1C0400986CE1 /* 38-airplane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "38-airplane.png"; sourceTree = "<group>"; };
+		AF61203A19DD1C0400986CE1 /* 38-airplane@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "38-airplane@2x.png"; sourceTree = "<group>"; };
+		AF61204B19DD200D00986CE1 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = SOURCE_ROOT; };
+		AF61204C19DD200D00986CE1 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = SOURCE_ROOT; };
+		AF61205019DD2B4000986CE1 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		AF61205219DD2B5500986CE1 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		AF61205819DD2BAB00986CE1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF61205A19DD2BB600986CE1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AF61205C19DD2BC300986CE1 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AF61206019DD2BD900986CE1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AF61206419DD2C7000986CE1 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BmobSDK.framework; path = ../Bmob_SDK_iOS_v1.4.6/BmobSDK.framework; sourceTree = "<group>"; };
+		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
+		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01FB8662169E2D8B00A0A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF61206519DD2C7000986CE1 /* BmobSDK.framework in Frameworks */,
+				AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */,
+				AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */,
+				AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */,
+				AF61205D19DD2BC300986CE1 /* MobileCoreServices.framework in Frameworks */,
+				AF61205B19DD2BB600986CE1 /* Security.framework in Frameworks */,
+				AF61205919DD2BAB00986CE1 /* CoreLocation.framework in Frameworks */,
+				AF61205719DD2B9300986CE1 /* CoreGraphics.framework in Frameworks */,
+				AF61205619DD2B8B00986CE1 /* Foundation.framework in Frameworks */,
+				AF61205519DD2B8000986CE1 /* UIKit.framework in Frameworks */,
+				AF61205419DD2B7900986CE1 /* MapKit.framework in Frameworks */,
+				AF61205319DD2B5500986CE1 /* libicucore.dylib in Frameworks */,
+				AF61205119DD2B4000986CE1 /* libz.1.2.5.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01FB865A169E2D8B00A0A1A8 = {
+			isa = PBXGroup;
+			children = (
+				AF61200219DD1B9600986CE1 /* Images */,
+				01FB866F169E2D8B00A0A1A8 /* VReader */,
+				01FB8668169E2D8B00A0A1A8 /* Frameworks */,
+				01FB8666169E2D8B00A0A1A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01FB8666169E2D8B00A0A1A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01FB8665169E2D8B00A0A1A8 /* VReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF61206419DD2C7000986CE1 /* BmobSDK.framework */,
+				AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */,
+				AF61206019DD2BD900986CE1 /* CoreTelephony.framework */,
+				AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */,
+				AF61205C19DD2BC300986CE1 /* MobileCoreServices.framework */,
+				AF61205A19DD2BB600986CE1 /* Security.framework */,
+				AF61205819DD2BAB00986CE1 /* CoreLocation.framework */,
+				AF61205219DD2B5500986CE1 /* libicucore.dylib */,
+				AF61205019DD2B4000986CE1 /* libz.1.2.5.dylib */,
+				01FB86AF169E42B600A0A1A8 /* MapKit.framework */,
+				01FB8669169E2D8B00A0A1A8 /* UIKit.framework */,
+				01FB866B169E2D8B00A0A1A8 /* Foundation.framework */,
+				01FB866D169E2D8B00A0A1A8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01FB866F169E2D8B00A0A1A8 /* VReader */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */,
+				AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */,
+				AF611FB519DD0C6200986CE1 /* MainStoryboard-iPad.storyboard */,
+				AF611FB719DD0C6200986CE1 /* MainStoryboard.storyboard */,
+				AF611F9D19DD0C3500986CE1 /* AppDelegate.h */,
+				AF611F9E19DD0C3500986CE1 /* AppDelegate.m */,
+				AF611F9F19DD0C3500986CE1 /* ColorViewController.h */,
+				AF611FA019DD0C3500986CE1 /* ColorViewController.m */,
+				AF611FA119DD0C3500986CE1 /* MapViewController.h */,
+				AF611FA219DD0C3500986CE1 /* MapViewController.m */,
+				AF611FA319DD0C3500986CE1 /* MenuViewController.h */,
+				AF611FA419DD0C3500986CE1 /* MenuViewController.m */,
+				AF611FFF19DD11FC00986CE1 /* FrontTableViewController.h */,
+				AF61200019DD11FC00986CE1 /* FrontTableViewController.m */,
+				AF61204B19DD200D00986CE1 /* SidebarViewController.h */,
+				AF61204C19DD200D00986CE1 /* SidebarViewController.m */,
+				AF45B29219DD346900FC5E77 /* FrontTableViewCell.h */,
+				AF45B29319DD346900FC5E77 /* FrontTableViewCell.m */,
+				01FB8670169E2D8B00A0A1A8 /* Supporting Files */,
+			);
+			name = VReader;
+			path = RevealControllerStoryboardExample;
+			sourceTree = "<group>";
+		};
+		01FB8670169E2D8B00A0A1A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF611FBC19DD0C8000986CE1 /* Default-568h@2x.png */,
+				AF611FBD19DD0C8000986CE1 /* Default.png */,
+				AF611FBE19DD0C8000986CE1 /* Default@2x.png */,
+				AF611FBF19DD0C8000986CE1 /* main.m */,
+				AF611FC019DD0C8000986CE1 /* reveal-icon.png */,
+				AF611FC119DD0C8000986CE1 /* reveal-icon@2x.png */,
+				AF611FC219DD0C8000986CE1 /* VReader-Info.plist */,
+				AF611FC319DD0C8000986CE1 /* VReader-Prefix.pch */,
+				AF611FB319DD0C6200986CE1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF61200219DD1B9600986CE1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AF61202F19DD1C0400986CE1 /* 21-skull.png */,
+				AF61203019DD1C0400986CE1 /* 21-skull@2x.png */,
+				AF61203119DD1C0400986CE1 /* 24-gift.png */,
+				AF61203219DD1C0400986CE1 /* 24-gift@2x.png */,
+				AF61203319DD1C0400986CE1 /* 28-star.png */,
+				AF61203419DD1C0400986CE1 /* 28-star@2x.png */,
+				AF61203519DD1C0400986CE1 /* 29-heart.png */,
+				AF61203619DD1C0400986CE1 /* 29-heart@2x.png */,
+				AF61203719DD1C0400986CE1 /* 31-ipod.png */,
+				AF61203819DD1C0400986CE1 /* 31-ipod@2x.png */,
+				AF61203919DD1C0400986CE1 /* 38-airplane.png */,
+				AF61203A19DD1C0400986CE1 /* 38-airplane@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01FB8664169E2D8B00A0A1A8 /* VReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01FB8689169E2D8B00A0A1A8 /* Build configuration list for PBXNativeTarget "VReader" */;
+			buildPhases = (
+				01FB8661169E2D8B00A0A1A8 /* Sources */,
+				01FB8662169E2D8B00A0A1A8 /* Frameworks */,
+				01FB8663169E2D8B00A0A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VReader;
+			productName = RevealControllerStoryboardExample;
+			productReference = 01FB8665169E2D8B00A0A1A8 /* VReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01FB865C169E2D8B00A0A1A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = CoDeveloper;
+			};
+			buildConfigurationList = 01FB865F169E2D8B00A0A1A8 /* Build configuration list for PBXProject "VReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 01FB865A169E2D8B00A0A1A8;
+			productRefGroup = 01FB8666169E2D8B00A0A1A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01FB8664169E2D8B00A0A1A8 /* VReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01FB8663169E2D8B00A0A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF611FC619DD0C8000986CE1 /* Default@2x.png in Resources */,
+				AF61204019DD1C0400986CE1 /* 24-gift@2x.png in Resources */,
+				AF611FCA19DD0C8000986CE1 /* VReader-Info.plist in Resources */,
+				AF61203E19DD1C0400986CE1 /* 21-skull@2x.png in Resources */,
+				AF61203F19DD1C0400986CE1 /* 24-gift.png in Resources */,
+				AF611FC919DD0C8000986CE1 /* reveal-icon@2x.png in Resources */,
+				AF611FB919DD0C6200986CE1 /* InfoPlist.strings in Resources */,
+				AF61204119DD1C0400986CE1 /* 28-star.png in Resources */,
+				AF61204619DD1C0400986CE1 /* 31-ipod@2x.png in Resources */,
+				AF611FC419DD0C8000986CE1 /* Default-568h@2x.png in Resources */,
+				AF61204719DD1C0400986CE1 /* 38-airplane.png in Resources */,
+				AF61204819DD1C0400986CE1 /* 38-airplane@2x.png in Resources */,
+				AF611FBB19DD0C6200986CE1 /* MainStoryboard.storyboard in Resources */,
+				AF61203D19DD1C0400986CE1 /* 21-skull.png in Resources */,
+				AF61204319DD1C0400986CE1 /* 29-heart.png in Resources */,
+				AF611FBA19DD0C6200986CE1 /* MainStoryboard-iPad.storyboard in Resources */,
+				AF61204519DD1C0400986CE1 /* 31-ipod.png in Resources */,
+				AF61204419DD1C0400986CE1 /* 29-heart@2x.png in Resources */,
+				AF61204219DD1C0400986CE1 /* 28-star@2x.png in Resources */,
+				AF611FC819DD0C8000986CE1 /* reveal-icon.png in Resources */,
+				AF611FC519DD0C8000986CE1 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01FB8661169E2D8B00A0A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF611FA819DD0C3500986CE1 /* MenuViewController.m in Sources */,
+				AF61200119DD11FC00986CE1 /* FrontTableViewController.m in Sources */,
+				AF45B29419DD346900FC5E77 /* FrontTableViewCell.m in Sources */,
+				AF61204D19DD200D00986CE1 /* SidebarViewController.m in Sources */,
+				AF611FA719DD0C3500986CE1 /* MapViewController.m in Sources */,
+				AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */,
+				AF611FA619DD0C3500986CE1 /* ColorViewController.m in Sources */,
+				AF611FC719DD0C8000986CE1 /* main.m in Sources */,
+				AF611FA519DD0C3500986CE1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AF611FB319DD0C6200986CE1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF611FB419DD0C6200986CE1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AF611FB519DD0C6200986CE1 /* MainStoryboard-iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF611FB619DD0C6200986CE1 /* en */,
+			);
+			name = "MainStoryboard-iPad.storyboard";
+			sourceTree = "<group>";
+		};
+		AF611FB719DD0C6200986CE1 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF611FB819DD0C6200986CE1 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01FB8687169E2D8B00A0A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		01FB8688169E2D8B00A0A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01FB868A169E2D8B00A0A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/liwenqian/Desktop/VReader/Bmob_SDK_iOS_v1.4.6,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VReader/VReader-Prefix.pch";
+				INFOPLIST_FILE = "VReader/VReader-Info.plist";
+				PRODUCT_NAME = VReader;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		01FB868B169E2D8B00A0A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/liwenqian/Desktop/VReader/Bmob_SDK_iOS_v1.4.6,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VReader/VReader-Prefix.pch";
+				INFOPLIST_FILE = "VReader/VReader-Info.plist";
+				PRODUCT_NAME = VReader;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01FB865F169E2D8B00A0A1A8 /* Build configuration list for PBXProject "VReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FB8687169E2D8B00A0A1A8 /* Debug */,
+				01FB8688169E2D8B00A0A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01FB8689169E2D8B00A0A1A8 /* Build configuration list for PBXNativeTarget "VReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01FB868A169E2D8B00A0A1A8 /* Debug */,
+				01FB868B169E2D8B00A0A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01FB865C169E2D8B00A0A1A8 /* Project object */;
+}

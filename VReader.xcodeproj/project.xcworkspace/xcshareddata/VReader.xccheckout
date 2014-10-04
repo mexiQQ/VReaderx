@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EFF8B663-D140-45E6-BBD6-E8CEF71D1FEC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VReader</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>01529694042D8C98B30DC19F4D4370A306884FE4</key>
+		<string>https://github.com/John-Lluch/SWRevealViewController.git</string>
+		<key>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</key>
+		<string>https://github.com/mexiQQ/VReader-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VReader.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>01529694042D8C98B30DC19F4D4370A306884FE4</key>
+		<string>../../../SWRevealViewController</string>
+		<key>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mexiQQ/VReader-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01529694042D8C98B30DC19F4D4370A306884FE4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SWRevealViewController</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9FE854EC657AAE2B0BDE12752E299CF5AF5B9000</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VReader-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
