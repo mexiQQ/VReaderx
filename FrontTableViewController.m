@@ -9,6 +9,7 @@
 #import "FrontTableViewController.h"
 #import <BmobSDK/Bmob.h>
 #import "FrontTableViewCell.h"
+#import "DetailViewContrpller.h"
 @interface FrontTableViewController ()
 
 @end
@@ -99,8 +100,8 @@
     
     NSLog(@"lijianwei playerName = %@", [[myarray objectAtIndex:indexPath.row] objectForKey:@"playerName"]);
     
-    cell.newsTitle.text = [[myarray objectAtIndex:indexPath.row] objectForKey:@"playerName"];
-    cell.publishTime.text = [NSString stringWithFormat:@"%@", [[myarray objectAtIndex:indexPath.row] objectForKey:@"score"]];
+    cell.newsTitle.text = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.publishTime.text = [NSString stringWithFormat:@"%@", [[myarray objectAtIndex:indexPath.row] objectForKey:@"publishTime"]];
     
     //cell.newsTitle.text = @"hello world";
     //cell.publishTime.text = @"2014-1009";
@@ -121,20 +122,13 @@
         self.refreshControl.attributedTitle = attributedTitle;
         
         //请求数据
-        BmobQuery   *bquery = [BmobQuery queryWithClassName:@"GameScore"];
-        [bquery selectKeys:@[@"score",@"playerName"]];
-        //查找GameScore表所有数据
+        BmobQuery   *bquery = [BmobQuery queryWithClassName:@"module1"];
+        [bquery selectKeys:@[@"title",@"publishTime"]];
+        [bquery setLimit:15];
+        [bquery orderByDescending:@"createdAt"];
         [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-            
             myarray = array;
             [self performSelector:@selector(reloadData) withObject:nil afterDelay:0];
-            NSLog(@"%@",error);
-            /*
-            for (BmobObject *obj in array) {
-                //打印playerName
-                NSLog(@"obj.playerName = %@", [obj objectForKey:@"playerName"]);
-            }
-             */
         }];
         
         }
@@ -185,8 +179,12 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewContrpller *destViewController = segue.destinationViewController;
+        destViewController.titleName = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
+        destViewController.createTime = [[myarray objectAtIndex:indexPath.row] objectForKey:@"CreateTime"];
+    }
 }
 
 

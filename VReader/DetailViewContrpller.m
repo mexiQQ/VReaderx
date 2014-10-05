@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewContrpller.h"
+#import <BmobSDK/Bmob.h>
 
 @interface DetailViewContrpller ()
 @end
@@ -14,18 +15,39 @@
 @synthesize myScroller;
 @synthesize newsContent;
 @synthesize newsTitle;
+@synthesize titleName;
+@synthesize createTime;
+@synthesize myprogress;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    newsTitle.text = titleName;
+    [myprogress setHidesWhenStopped:YES];
+    [myprogress startAnimating];
+    BmobQuery  *bquery = [BmobQuery queryWithClassName:@"module1"];
+    [bquery selectKeys:@[@"content"]];
+    [bquery whereKey:@"title" equalTo:titleName];
+    [bquery whereKey:@"CreateTime" equalTo:createTime];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        
+    BmobObject *bomb = [array objectAtIndex:0];
+        newsContent.text = [bomb objectForKey:@"content"];
+    [self performSelector:@selector(showContent) withObject:nil afterDelay:0];
+    }];
+}
+
+
+-(void)showContent{
+    [myprogress stopAnimating];
     NSString *desContent = newsContent.text;
-     CGSize  textSize = [desContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(240, 2000) lineBreakMode:NSLineBreakByWordWrapping];
+    CGSize  textSize = [desContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(240, 2000) lineBreakMode:NSLineBreakByWordWrapping];
     
-     //[newsContent setContentSize:CGSizeMake(newsContent.frame.size.width,textSize.height+20)];
-     
-     [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,textSize.height
-                                     +20)];
+    //[newsContent setContentSize:CGSizeMake(newsContent.frame.size.width,textSize.height+20)];
     
-    
+    [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,textSize.height+20)];
+    [newsContent setShowsVerticalScrollIndicator:NO];
+    [newsContent setEditable:NO];
     [myScroller setMaximumZoomScale:1];
     [myScroller setMinimumZoomScale:1];
     [myScroller setShowsVerticalScrollIndicator:NO];
@@ -33,7 +55,6 @@
     [myScroller setPagingEnabled:YES];
     [myScroller setContentSize:CGSizeMake(newsContent.frame.size.width, newsContent.frame.size.height)];
     [myScroller setDelegate:self];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
