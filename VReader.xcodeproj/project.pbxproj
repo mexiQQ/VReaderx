@@ -49,6 +49,7 @@
 		AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206019DD2BD900986CE1 /* CoreTelephony.framework */; };
 		AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */; };
 		AF61206519DD2C7000986CE1 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206419DD2C7000986CE1 /* BmobSDK.framework */; };
+		AF61B2F519E0559B0059C468 /* DetailViewContrpller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */; };
 		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,8 @@
 		AF61206019DD2BD900986CE1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AF61206419DD2C7000986CE1 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BmobSDK.framework; path = ../Bmob_SDK_iOS_v1.4.6/BmobSDK.framework; sourceTree = "<group>"; };
+		AF61B2F319E0559B0059C468 /* DetailViewContrpller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewContrpller.h; path = VReader/DetailViewContrpller.h; sourceTree = SOURCE_ROOT; };
+		AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewContrpller.m; path = VReader/DetailViewContrpller.m; sourceTree = SOURCE_ROOT; };
 		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -191,6 +194,8 @@
 				AF61204C19DD200D00986CE1 /* SidebarViewController.m */,
 				AF45B29219DD346900FC5E77 /* FrontTableViewCell.h */,
 				AF45B29319DD346900FC5E77 /* FrontTableViewCell.m */,
+				AF61B2F319E0559B0059C468 /* DetailViewContrpller.h */,
+				AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */,
 				01FB8670169E2D8B00A0A1A8 /* Supporting Files */,
 			);
 			name = VReader;
@@ -318,6 +323,7 @@
 				AF61200119DD11FC00986CE1 /* FrontTableViewController.m in Sources */,
 				AF45B29419DD346900FC5E77 /* FrontTableViewCell.m in Sources */,
 				AF61204D19DD200D00986CE1 /* SidebarViewController.m in Sources */,
+				AF61B2F519E0559B0059C468 /* DetailViewContrpller.m in Sources */,
 				AF611FA719DD0C3500986CE1 /* MapViewController.m in Sources */,
 				AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */,
 				AF611FA619DD0C3500986CE1 /* ColorViewController.m in Sources */,
