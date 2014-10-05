@@ -17,7 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,newsContent.contentSize.height+60+newsTitle.frame.size.height)];
+    NSString *desContent = newsContent.text;
+     CGSize  textSize = [desContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(240, 2000) lineBreakMode:NSLineBreakByWordWrapping];
+    
+     //[newsContent setContentSize:CGSizeMake(newsContent.frame.size.width,textSize.height+20)];
+     
+     [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,textSize.height
+                                     +20)];
+    
+    
     [myScroller setMaximumZoomScale:1];
     [myScroller setMinimumZoomScale:1];
     [myScroller setShowsVerticalScrollIndicator:NO];

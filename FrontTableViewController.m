@@ -127,6 +127,8 @@
         [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
             
             myarray = array;
+            [self performSelector:@selector(reloadData) withObject:nil afterDelay:0];
+            NSLog(@"%@",error);
             /*
             for (BmobObject *obj in array) {
                 //打印playerName
@@ -135,8 +137,7 @@
              */
         }];
         
-        [self performSelector:@selector(reloadData) withObject:nil afterDelay:0];
-    }
+        }
 }
 
 -(void)reloadData{

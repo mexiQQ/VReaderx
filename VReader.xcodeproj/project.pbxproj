@@ -48,9 +48,9 @@
 		AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */; };
 		AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206019DD2BD900986CE1 /* CoreTelephony.framework */; };
 		AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */; };
-		AF61206519DD2C7000986CE1 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206419DD2C7000986CE1 /* BmobSDK.framework */; };
 		AF61B2F519E0559B0059C468 /* DetailViewContrpller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */; };
 		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
+		AFBA049619E1819600DB8B72 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBA049519E1819600DB8B72 /* BmobSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,11 +104,11 @@
 		AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		AF61206019DD2BD900986CE1 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AF61206419DD2C7000986CE1 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BmobSDK.framework; path = ../Bmob_SDK_iOS_v1.4.6/BmobSDK.framework; sourceTree = "<group>"; };
 		AF61B2F319E0559B0059C468 /* DetailViewContrpller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewContrpller.h; path = VReader/DetailViewContrpller.h; sourceTree = SOURCE_ROOT; };
 		AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewContrpller.m; path = VReader/DetailViewContrpller.m; sourceTree = SOURCE_ROOT; };
 		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		AFBA049519E1819600DB8B72 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +116,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF61206519DD2C7000986CE1 /* BmobSDK.framework in Frameworks */,
 				AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */,
 				AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */,
 				AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */,
 				AF61205D19DD2BC300986CE1 /* MobileCoreServices.framework in Frameworks */,
 				AF61205B19DD2BB600986CE1 /* Security.framework in Frameworks */,
 				AF61205919DD2BAB00986CE1 /* CoreLocation.framework in Frameworks */,
+				AFBA049619E1819600DB8B72 /* BmobSDK.framework in Frameworks */,
 				AF61205719DD2B9300986CE1 /* CoreGraphics.framework in Frameworks */,
 				AF61205619DD2B8B00986CE1 /* Foundation.framework in Frameworks */,
 				AF61205519DD2B8000986CE1 /* UIKit.framework in Frameworks */,
@@ -156,7 +156,7 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF61206419DD2C7000986CE1 /* BmobSDK.framework */,
+				AFBA049519E1819600DB8B72 /* BmobSDK.framework */,
 				AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */,
 				AF61206019DD2BD900986CE1 /* CoreTelephony.framework */,
 				AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */,
