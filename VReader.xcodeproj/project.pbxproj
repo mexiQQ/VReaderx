@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF45B29419DD346900FC5E77 /* FrontTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF45B29319DD346900FC5E77 /* FrontTableViewCell.m */; };
+		AF592C2B19E38E2300B30E1F /* right_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF592C2A19E38E2300B30E1F /* right_button@2x.png */; };
 		AF611FA519DD0C3500986CE1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611F9E19DD0C3500986CE1 /* AppDelegate.m */; };
 		AF611FA619DD0C3500986CE1 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611FA019DD0C3500986CE1 /* ColorViewController.m */; };
 		AF611FA719DD0C3500986CE1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF611FA219DD0C3500986CE1 /* MapViewController.m */; };
@@ -61,6 +62,7 @@
 		01FB86AF169E42B600A0A1A8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AF45B29219DD346900FC5E77 /* FrontTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		AF45B29319DD346900FC5E77 /* FrontTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		AF592C2A19E38E2300B30E1F /* right_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_button@2x.png"; sourceTree = "<group>"; };
 		AF611F9D19DD0C3500986CE1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = VReader/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		AF611F9E19DD0C3500986CE1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = VReader/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		AF611F9F19DD0C3500986CE1 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorViewController.h; path = VReader/ColorViewController.h; sourceTree = SOURCE_ROOT; };
@@ -221,6 +223,7 @@
 		AF61200219DD1B9600986CE1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AF592C2A19E38E2300B30E1F /* right_button@2x.png */,
 				AF61202F19DD1C0400986CE1 /* 21-skull.png */,
 				AF61203019DD1C0400986CE1 /* 21-skull@2x.png */,
 				AF61203119DD1C0400986CE1 /* 24-gift.png */,
@@ -297,6 +300,7 @@
 				AF611FB919DD0C6200986CE1 /* InfoPlist.strings in Resources */,
 				AF61204119DD1C0400986CE1 /* 28-star.png in Resources */,
 				AF61204619DD1C0400986CE1 /* 31-ipod@2x.png in Resources */,
+				AF592C2B19E38E2300B30E1F /* right_button@2x.png in Resources */,
 				AF611FC419DD0C8000986CE1 /* Default-568h@2x.png in Resources */,
 				AF61204719DD1C0400986CE1 /* 38-airplane.png in Resources */,
 				AF61204819DD1C0400986CE1 /* 38-airplane@2x.png in Resources */,
