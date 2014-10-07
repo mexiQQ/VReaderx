@@ -10,6 +10,8 @@
 #import <BmobSDK/Bmob.h>
 #import "FrontTableViewCell.h"
 #import "DetailViewContrpller.h"
+#import <CoreData/CoreData.h>
+
 @interface FrontTableViewController ()
 
 @end
@@ -17,12 +19,24 @@
 @implementation FrontTableViewController
 {
     NSArray *myarray;
+    BOOL *local;
 }
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     SWRevealViewController *revealViewController = self.revealViewController;
+    
     
     if ( revealViewController )
     {
@@ -38,11 +52,22 @@
                             action:@selector(getLatestLoans)
                   forControlEvents:UIControlEventValueChanged];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    if (![self isLocalData]) {
+        // Display a message when the table is empty
+        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        
+        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
+        messageLabel.textColor = [UIColor blackColor];
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = NSTextAlignmentCenter;
+        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+        [messageLabel sizeToFit];
+        
+        self.tableView.backgroundView = messageLabel;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,8 +78,6 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    // Return the number of sections.
     if (myarray) {
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -78,6 +101,7 @@
     }
     
     return 0;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -97,12 +121,13 @@
         cell = [[FrontTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CoustomerTableIdentifier];
     }
     
-    
-    NSLog(@"lijianwei playerName = %@", [[myarray objectAtIndex:indexPath.row] objectForKey:@"playerName"]);
-    
-    cell.newsTitle.text = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
-    cell.publishTime.text = [NSString stringWithFormat:@"%@", [[myarray objectAtIndex:indexPath.row] objectForKey:@"publishTime"]];
-    
+    if(local){
+        cell.newsTitle.text = [[myarray objectAtIndex:indexPath.row] valueForKey:@"newsTitle"];
+        cell.publishTime.text = [[myarray objectAtIndex:indexPath.row] valueForKey:@"newsPublishTime"];
+    }else{
+        cell.newsTitle.text = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
+        cell.publishTime.text = [NSString stringWithFormat:@"%@", [[myarray objectAtIndex:indexPath.row] objectForKey:@"publishTime"]];
+    }
     //cell.newsTitle.text = @"hello world";
     //cell.publishTime.text = @"2014-1009";
     return cell;
@@ -127,19 +152,71 @@
         [bquery setLimit:15];
         [bquery orderByDescending:@"createdAt"];
         [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-            myarray = array;
-            [self performSelector:@selector(reloadData) withObject:nil afterDelay:0];
+            if(!error){
+                local = false;
+                myarray = array;
+                [NSThread detachNewThreadSelector:@selector(saveContent:) toTarget:self withObject:array];
+                [self performSelector:@selector(reloadData) withObject:nil afterDelay:0];
+            }else{
+                [self.refreshControl endRefreshing];
+                UIAlertView *alertView = [[UIAlertView alloc]
+                                          initWithTitle:@"友情提示"
+                                          message:@"无法获取数据，请检查网络(☆_☆)"
+                                          delegate:self cancelButtonTitle:@"关闭"
+                                          otherButtonTitles:nil, nil];
+                [alertView show];
+            }
         }];
         
-        }
+    }
 }
 
 -(void)reloadData{
      [self.tableView reloadData];
      [self.refreshControl endRefreshing];
-
+    
 }
 
+-(void)saveContent:(NSArray *)array{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"RecentlyNews"];
+    [fetchRequest setFetchLimit:15];
+    NSArray *news = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    for(NSManagedObject *obj in news){
+        [context deleteObject:obj];
+    }
+    
+    for (BmobObject *obj in array) {
+        NSManagedObject *newRecentlyNews = [NSEntityDescription insertNewObjectForEntityForName:@"RecentlyNews" inManagedObjectContext:context];
+        [newRecentlyNews setValue:[obj objectForKey:@"title"] forKey:@"newsTitle"];
+        [newRecentlyNews setValue:[obj objectForKey:@"publishTime"] forKey:@"newsPublishTime"];
+        //[newRecentlyNews setValue:[obj objectForKey:@"playerName"] forKey:@"newsContent"];
+        
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }else{
+            NSLog(@"save success!");
+        }
+    }
+}
+
+-(BOOL)isLocalData{
+
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"RecentlyNews"];
+    [fetchRequest setFetchLimit:15];
+    NSArray *news = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    if(news.count > 0)
+    {
+        myarray = news;
+        local = true;
+        return true;
+    }
+    local = false;
+    return false;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -182,10 +259,14 @@
     if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         DetailViewContrpller *destViewController = segue.destinationViewController;
-        destViewController.titleName = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
-        destViewController.createTime = [[myarray objectAtIndex:indexPath.row] objectForKey:@"CreateTime"];
+        if(local){
+            destViewController.titleName = [[myarray objectAtIndex:indexPath.row] valueForKey:@"newsTitle"];
+        }else{
+            destViewController.titleName = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
+        }
     }
 }
+
 
 
 @end

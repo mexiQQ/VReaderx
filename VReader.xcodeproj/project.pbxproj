@@ -50,6 +50,9 @@
 		AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206019DD2BD900986CE1 /* CoreTelephony.framework */; };
 		AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */; };
 		AF61B2F519E0559B0059C468 /* DetailViewContrpller.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */; };
+		AF662A6B19E39C22009B6C67 /* MyCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF662A6919E39C22009B6C67 /* MyCoreData.xcdatamodeld */; };
+		AF662A6F19E3A818009B6C67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF662A6E19E3A818009B6C67 /* CoreData.framework */; };
+		AF66A65819E3FFEC00DFE770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF66A65719E3FFEC00DFE770 /* Images.xcassets */; };
 		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
 		AFBA049619E1819600DB8B72 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBA049519E1819600DB8B72 /* BmobSDK.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +111,9 @@
 		AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AF61B2F319E0559B0059C468 /* DetailViewContrpller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewContrpller.h; path = VReader/DetailViewContrpller.h; sourceTree = SOURCE_ROOT; };
 		AF61B2F419E0559B0059C468 /* DetailViewContrpller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewContrpller.m; path = VReader/DetailViewContrpller.m; sourceTree = SOURCE_ROOT; };
+		AF662A6A19E39C22009B6C67 /* MyCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCoreData.xcdatamodel; sourceTree = "<group>"; };
+		AF662A6E19E3A818009B6C67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AF66A65719E3FFEC00DFE770 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 		AFBA049519E1819600DB8B72 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF662A6F19E3A818009B6C67 /* CoreData.framework in Frameworks */,
 				AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */,
 				AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */,
 				AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */,
@@ -140,6 +147,8 @@
 		01FB865A169E2D8B00A0A1A8 = {
 			isa = PBXGroup;
 			children = (
+				AF66A65719E3FFEC00DFE770 /* Images.xcassets */,
+				AF662A6919E39C22009B6C67 /* MyCoreData.xcdatamodeld */,
 				AF61200219DD1B9600986CE1 /* Images */,
 				01FB866F169E2D8B00A0A1A8 /* VReader */,
 				01FB8668169E2D8B00A0A1A8 /* Frameworks */,
@@ -158,6 +167,7 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF662A6E19E3A818009B6C67 /* CoreData.framework */,
 				AFBA049519E1819600DB8B72 /* BmobSDK.framework */,
 				AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */,
 				AF61206019DD2BD900986CE1 /* CoreTelephony.framework */,
@@ -292,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF611FC619DD0C8000986CE1 /* Default@2x.png in Resources */,
+				AF66A65819E3FFEC00DFE770 /* Images.xcassets in Resources */,
 				AF61204019DD1C0400986CE1 /* 24-gift@2x.png in Resources */,
 				AF611FCA19DD0C8000986CE1 /* VReader-Info.plist in Resources */,
 				AF61203E19DD1C0400986CE1 /* 21-skull@2x.png in Resources */,
@@ -333,6 +344,7 @@
 				AF611FA619DD0C3500986CE1 /* ColorViewController.m in Sources */,
 				AF611FC719DD0C8000986CE1 /* main.m in Sources */,
 				AF611FA519DD0C3500986CE1 /* AppDelegate.m in Sources */,
+				AF662A6B19E39C22009B6C67 /* MyCoreData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +484,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF662A6919E39C22009B6C67 /* MyCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF662A6A19E39C22009B6C67 /* MyCoreData.xcdatamodel */,
+			);
+			currentVersion = AF662A6A19E39C22009B6C67 /* MyCoreData.xcdatamodel */;
+			path = MyCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 01FB865C169E2D8B00A0A1A8 /* Project object */;
 }

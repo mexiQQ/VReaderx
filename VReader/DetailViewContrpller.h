@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *newsContent;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *myprogress;
 
-@property (nonatomic, strong) NSString *createTime;
 @property (nonatomic, strong) NSString *titleName;
 
 @end
