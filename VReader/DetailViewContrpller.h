@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewContrpller : UIViewController<UIScrollViewDelegate>
+@interface DetailViewContrpller : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *myScroller;
 @property (weak, nonatomic) IBOutlet UILabel *newsTitle;
 @property (weak, nonatomic) IBOutlet UITextView *newsContent;

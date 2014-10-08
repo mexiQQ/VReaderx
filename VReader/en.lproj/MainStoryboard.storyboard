@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -96,35 +97,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UAu-JT-wtb">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAu-JT-wtb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="文章标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XK-Vo-9H3">
-                                        <rect key="frame" x="139" y="15" width="42" height="30"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-g5-bNX">
+                                        <rect key="frame" x="10" y="65" width="300" height="495"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                    </textView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-Ts-mf2">
+                                        <rect key="frame" x="150" y="303" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文章标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XK-Vo-9H3">
+                                        <rect key="frame" x="60" y="20" width="200" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-g5-bNX">
-                                        <rect key="frame" x="10" y="60" width="300" height="1689.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-Ts-mf2">
-                                        <rect key="frame" x="150" y="258" width="20" height="20"/>
-                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="BDj-g5-bNX" secondAttribute="centerX" id="1JJ-UY-7EV"/>
-                                    <constraint firstAttribute="centerX" secondItem="7XK-Vo-9H3" secondAttribute="centerX" id="Qh0-6r-yAV"/>
-                                    <constraint firstAttribute="centerY" secondItem="sZb-Ts-mf2" secondAttribute="centerY" id="x2m-Gl-aio"/>
-                                    <constraint firstAttribute="centerX" secondItem="sZb-Ts-mf2" secondAttribute="centerX" id="z2R-jy-2sj"/>
+                                    <constraint firstItem="7XK-Vo-9H3" firstAttribute="leading" secondItem="UAu-JT-wtb" secondAttribute="leading" constant="60" id="940-vc-ra2"/>
+                                    <constraint firstAttribute="bottom" secondItem="BDj-g5-bNX" secondAttribute="bottom" constant="8" id="Akf-cN-Gmr"/>
+                                    <constraint firstAttribute="bottom" secondItem="7XK-Vo-9H3" secondAttribute="bottom" constant="518" id="Hqg-y2-QhM"/>
+                                    <constraint firstItem="7XK-Vo-9H3" firstAttribute="top" secondItem="UAu-JT-wtb" secondAttribute="top" constant="20" id="JWh-kk-aKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="sZb-Ts-mf2" secondAttribute="trailing" constant="150" id="OgT-0r-6T8"/>
+                                    <constraint firstItem="sZb-Ts-mf2" firstAttribute="leading" secondItem="UAu-JT-wtb" secondAttribute="leading" constant="150" id="Qlc-r9-f8F"/>
+                                    <constraint firstItem="sZb-Ts-mf2" firstAttribute="top" secondItem="UAu-JT-wtb" secondAttribute="top" constant="303" id="SfE-cG-WhV"/>
+                                    <constraint firstItem="BDj-g5-bNX" firstAttribute="bottom" secondItem="UAu-JT-wtb" secondAttribute="bottomMargin" id="XvR-u0-jI6"/>
+                                    <constraint firstAttribute="trailing" secondItem="7XK-Vo-9H3" secondAttribute="trailing" constant="60" id="cs9-z3-zlM"/>
+                                    <constraint firstItem="BDj-g5-bNX" firstAttribute="top" secondItem="UAu-JT-wtb" secondAttribute="top" constant="65" id="kPX-Wq-jT5"/>
+                                    <constraint firstItem="BDj-g5-bNX" firstAttribute="leading" secondItem="UAu-JT-wtb" secondAttribute="leading" constant="10" id="qwG-bF-lBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="BDj-g5-bNX" secondAttribute="trailing" constant="10" id="tUT-11-MZP"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UAu-JT-wtb" firstAttribute="leading" secondItem="8DH-AP-Ecc" secondAttribute="leading" id="4mg-yB-8Gz"/>
+                            <constraint firstAttribute="trailing" secondItem="UAu-JT-wtb" secondAttribute="trailing" id="IsE-on-FKN"/>
+                            <constraint firstItem="UAu-JT-wtb" firstAttribute="top" secondItem="8DH-AP-Ecc" secondAttribute="top" id="cC6-Yl-3ds"/>
+                            <constraint firstAttribute="bottom" secondItem="UAu-JT-wtb" secondAttribute="bottom" id="hOW-FI-egA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="VReader" id="WWx-Bt-IAq"/>
                     <connections>
@@ -136,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bm-71-tJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="1129"/>
+            <point key="canvasLocation" x="1551" y="1118"/>
         </scene>
         <!--Map-->
         <scene sceneID="9dn-3g-hds">

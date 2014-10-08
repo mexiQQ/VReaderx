@@ -79,7 +79,7 @@
     
     //[newsContent setContentSize:CGSizeMake(newsContent.frame.size.width,textSize.height+20)];
     
-    [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,textSize.height+20)];
+    [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,textSize.height+30)];
     [newsContent setShowsVerticalScrollIndicator:NO];
     [newsContent setEditable:NO];
     [myScroller setMaximumZoomScale:1];
@@ -87,9 +87,8 @@
     [myScroller setShowsVerticalScrollIndicator:NO];
     [myScroller setScrollEnabled:YES];
     [myScroller setPagingEnabled:YES];
-    [myScroller setContentSize:CGSizeMake(newsContent.frame.size.width, newsContent.frame.size.height)];
-    //[myScroller setDelegate:self];
-}
+    [myScroller setContentSize:CGSizeMake(myScroller.frame.size.width, newsContent.frame.size.height+newsTitle.frame.size.height)];
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
