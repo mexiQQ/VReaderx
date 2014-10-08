@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setBackgroundColor:[UIColor blackColor]];
-    menuItems = @[@"title", @"news1", @"news2", @"news3", @"news4", @"news5", @"news6", @"news7", @"news8"];
+    menuItems = @[@"title", @"news1", @"news2", @"news3", @"news4", @"news5", @"news6", @"news7", @"news8",@"label9"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

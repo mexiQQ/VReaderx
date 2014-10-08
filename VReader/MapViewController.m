@@ -61,4 +61,9 @@
     [self customSetup];
 }
 
+- (IBAction)openAppleMapApp:(id)sender {
+    
+    MKMapItem *currentLocation = [MKMapItem mapItemForCurrentLocation];
+    [currentLocation openInMapsWithLaunchOptions:nil];
+}
 @end
