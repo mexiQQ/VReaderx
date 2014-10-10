@@ -20,7 +20,10 @@
 {
     NSArray *myarray;
     BOOL *local;
+    NSString *module;
+    NSString *myEntimty;
 }
+@synthesize tag;
 
 - (NSManagedObjectContext *)managedObjectContext {
     NSManagedObjectContext *context = nil;
@@ -34,9 +37,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self selectModule];
     SWRevealViewController *revealViewController = self.revealViewController;
-    
     
     if ( revealViewController )
     {
@@ -46,28 +48,16 @@
     }
     
     self.refreshControl = [[UIRefreshControl alloc] init];
-    self.refreshControl.backgroundColor = [UIColor purpleColor];
+    self.refreshControl.backgroundColor = [UIColor lightGrayColor];
     self.refreshControl.tintColor = [UIColor whiteColor];
     [self.refreshControl addTarget:self
                             action:@selector(getLatestLoans)
                   forControlEvents:UIControlEventValueChanged];
 
     if (![self isLocalData]) {
-        // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        
-        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-        messageLabel.textColor = [UIColor blackColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
-        [messageLabel sizeToFit];
-        
-        self.tableView.backgroundView = messageLabel;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
+       
+        //todo 可设置自动获取数据
     }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -147,7 +137,7 @@
         self.refreshControl.attributedTitle = attributedTitle;
         
         //请求数据
-        BmobQuery   *bquery = [BmobQuery queryWithClassName:@"module1"];
+        BmobQuery   *bquery = [BmobQuery queryWithClassName:module];
         [bquery selectKeys:@[@"title",@"publishTime"]];
         [bquery setLimit:15];
         [bquery orderByDescending:@"createdAt"];
@@ -174,12 +164,12 @@
 -(void)reloadData{
      [self.tableView reloadData];
      [self.refreshControl endRefreshing];
-    
+     [self.tableView setBackgroundView:nil];
 }
 
 -(void)saveContent:(NSArray *)array{
     NSManagedObjectContext *context = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"RecentlyNews"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:myEntimty];
     [fetchRequest setFetchLimit:15];
     NSArray *news = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
@@ -188,7 +178,7 @@
     }
     
     for (BmobObject *obj in array) {
-        NSManagedObject *newRecentlyNews = [NSEntityDescription insertNewObjectForEntityForName:@"RecentlyNews" inManagedObjectContext:context];
+        NSManagedObject *newRecentlyNews = [NSEntityDescription insertNewObjectForEntityForName:myEntimty inManagedObjectContext:context];
         [newRecentlyNews setValue:[obj objectForKey:@"title"] forKey:@"newsTitle"];
         [newRecentlyNews setValue:[obj objectForKey:@"publishTime"] forKey:@"newsPublishTime"];
         //[newRecentlyNews setValue:[obj objectForKey:@"playerName"] forKey:@"newsContent"];
@@ -205,7 +195,7 @@
 -(BOOL)isLocalData{
 
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"RecentlyNews"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:myEntimty];
     [fetchRequest setFetchLimit:15];
     NSArray *news = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     if(news.count > 0)
@@ -261,12 +251,35 @@
         DetailViewContrpller *destViewController = segue.destinationViewController;
         if(local){
             destViewController.titleName = [[myarray objectAtIndex:indexPath.row] valueForKey:@"newsTitle"];
+            destViewController.publishTime = [[myarray objectAtIndex:indexPath.row] valueForKey:@"newsPublishTime"];
+            destViewController.tag = tag;
         }else{
             destViewController.titleName = [[myarray objectAtIndex:indexPath.row] objectForKey:@"title"];
+            destViewController.publishTime = [[myarray objectAtIndex:indexPath.row] objectForKey:@"publishTime"];
+            destViewController.tag = tag;
         }
     }
 }
 
-
+-(void)selectModule{
+    
+    if([tag isEqual:@"news1"]||(tag == nil)){
+        module = @"module1";
+        myEntimty = @"RecentlyNews";
+        _appTitle.title = @"新闻动态";
+    }else if([tag isEqual:@"news2"]){
+        module = @"module2";
+        myEntimty = @"SchoolEmploy";
+        _appTitle.title = @"校园招聘";
+    }else if([tag isEqual:@"news3"]){
+        module = @"module3";
+        myEntimty = @"OnlineEmploy";
+        _appTitle.title = @"在线招聘";
+    }else if([tag isEqual:@"news4"]){
+        module = @"module4";
+        myEntimty = @"PractiseEmploy";
+        _appTitle.title = @"实习招聘";
+    }
+}
 
 @end

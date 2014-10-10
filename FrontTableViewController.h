@@ -10,5 +10,6 @@
 
 @interface FrontTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *revealButtonItem;
-
+@property (nonatomic, strong) NSString* tag;
+@property (weak, nonatomic) IBOutlet UINavigationItem *appTitle;
 @end

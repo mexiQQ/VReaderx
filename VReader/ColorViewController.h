@@ -8,5 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorViewController : UIViewController
+@interface ColorViewController : UIViewController<UIWebViewDelegate>  
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *myUIActivityIndicatorView;
 @end

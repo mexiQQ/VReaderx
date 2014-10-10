@@ -30,8 +30,12 @@
         [self.revealButtonItem setAction: @selector( revealToggle: )];
         [self.navigationController.navigationBar addGestureRecognizer:revealViewController.panGestureRecognizer];
     }
+    [_myUIActivityIndicatorView setHidesWhenStopped:YES];
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mp.weixin.qq.com/s?__biz=MzA5MzM4MzMwNA==&mid=200919458&idx=1&sn=884c7e8bd4b94a15f722dbf6a652d481#rd"]];
+    [_myWebView loadRequest:request];
+    [_myWebView setDelegate:self];
     
-  }
+}
 
 #pragma mark state preservation / restoration
 
@@ -64,5 +68,27 @@
     // Call whatever function you need to visually restore
     [self customSetup];
 }
+
+- (void )webViewDidStartLoad:(UIWebView  *)webView{
+    [_myUIActivityIndicatorView startAnimating];
+
+}
+
+- (void )webViewDidFinishLoad:(UIWebView  *)webView{
+    [_myUIActivityIndicatorView stopAnimating];
+}
+
+
+- (void)webView:(UIWebView *)webView  didFailLoadWithError:(NSError *)error{
+    [_myUIActivityIndicatorView stopAnimating];
+    UIAlertView *alertView = [[UIAlertView alloc]
+                              initWithTitle:@"友情提示"
+                              message:@"无法获取数据，请检查网络(☆_☆)"
+                              delegate:self cancelButtonTitle:@"关闭"
+                              otherButtonTitles:nil, nil];
+    [alertView show];
+
+}
+
 
 @end

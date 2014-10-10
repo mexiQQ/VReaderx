@@ -57,6 +57,8 @@
 		AF66A65819E3FFEC00DFE770 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF66A65719E3FFEC00DFE770 /* Images.xcassets */; };
 		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
 		AFBA049619E1819600DB8B72 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBA049519E1819600DB8B72 /* BmobSDK.framework */; };
+		AFDC8F0C19E79B9D00B36663 /* CollectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */; };
+		AFDC8F0F19E7BCF600B36663 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC8F0E19E7BCF600B36663 /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,10 @@
 		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 		AFBA049519E1819600DB8B72 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		AFDC8F0A19E79B9D00B36663 /* CollectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionTableViewController.h; path = VReader/CollectionTableViewController.h; sourceTree = SOURCE_ROOT; };
+		AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionTableViewController.m; path = VReader/CollectionTableViewController.m; sourceTree = SOURCE_ROOT; };
+		AFDC8F0D19E7BCF600B36663 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = VReader/QuestionViewController.h; sourceTree = SOURCE_ROOT; };
+		AFDC8F0E19E7BCF600B36663 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = VReader/QuestionViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,10 @@
 				AF65FF6F19E5355D001737B6 /* ContactToUSViewController.m */,
 				AF65FF7319E53F0B001737B6 /* SuggestionViewController.h */,
 				AF65FF7419E53F0B001737B6 /* SuggestionViewController.m */,
+				AFDC8F0A19E79B9D00B36663 /* CollectionTableViewController.h */,
+				AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */,
+				AFDC8F0D19E7BCF600B36663 /* QuestionViewController.h */,
+				AFDC8F0E19E7BCF600B36663 /* QuestionViewController.m */,
 				01FB8670169E2D8B00A0A1A8 /* Supporting Files */,
 			);
 			name = VReader;
@@ -343,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDC8F0C19E79B9D00B36663 /* CollectionTableViewController.m in Sources */,
 				AF61200119DD11FC00986CE1 /* FrontTableViewController.m in Sources */,
 				AF45B29419DD346900FC5E77 /* FrontTableViewCell.m in Sources */,
 				AF61204D19DD200D00986CE1 /* SidebarViewController.m in Sources */,
@@ -352,6 +363,7 @@
 				AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */,
 				AF611FA619DD0C3500986CE1 /* ColorViewController.m in Sources */,
 				AF65FF7019E5355D001737B6 /* ContactToUSViewController.m in Sources */,
+				AFDC8F0F19E7BCF600B36663 /* QuestionViewController.m in Sources */,
 				AF611FC719DD0C8000986CE1 /* main.m in Sources */,
 				AF611FA519DD0C3500986CE1 /* AppDelegate.m in Sources */,
 				AF662A6B19E39C22009B6C67 /* MyCoreData.xcdatamodeld in Sources */,

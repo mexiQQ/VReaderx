@@ -7,7 +7,7 @@
 //
 
 #import "SidebarViewController.h"
-
+#import "FrontTableViewController.h"
 @interface SidebarViewController ()
 
 @end
@@ -93,8 +93,13 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UINavigationController *navController = segue.destinationViewController;
+    FrontTableViewController* cvc = [navController childViewControllers].firstObject;
+    if ( [cvc isKindOfClass:[FrontTableViewController class]] )
+    {
+        cvc.tag = [menuItems objectAtIndex:indexPath.row];
+    }
 }
 
 #pragma mark state preservation / restoration

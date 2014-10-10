@@ -11,6 +11,10 @@
 #import <CoreData/CoreData.h>
 
 @interface DetailViewContrpller ()
+{
+    NSString *module;
+    NSString *myEntimty;
+}
 @end
 @implementation DetailViewContrpller
 @synthesize myScroller;
@@ -18,6 +22,9 @@
 @synthesize newsTitle;
 @synthesize titleName;
 @synthesize myprogress;
+@synthesize tag;
+@synthesize SaveButton;
+@synthesize publishTime;
 
 - (NSManagedObjectContext *)managedObjectContext
 {
@@ -32,15 +39,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self selectModule];
     newsTitle.text = titleName;
     [myprogress setHidesWhenStopped:YES];
     [myprogress startAnimating];
     
     if(![self isLocalData])
     {
-        BmobQuery  *bquery = [BmobQuery queryWithClassName:@"module1"];
+        BmobQuery  *bquery = [BmobQuery queryWithClassName:module];
         [bquery selectKeys:@[@"content"]];
         [bquery whereKey:@"title" equalTo:titleName];
+        [bquery whereKey:@"publishTime" equalTo:publishTime];
         [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
             BmobObject *bomb = [array objectAtIndex:0];
             [newsContent setText:[bomb objectForKey:@"content"]];
@@ -53,7 +62,7 @@
 -(void)saveContent:(BmobObject *)bomb{
     
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"RecentlyNews"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:myEntimty];
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"newsTitle == %@",titleName];
     [fetchRequest setPredicate:predicate];
 
@@ -79,7 +88,7 @@
     
     //[newsContent setContentSize:CGSizeMake(newsContent.frame.size.width,textSize.height+20)];
     
-    [newsContent setFrame:CGRectMake(0, 0,newsContent.frame.size.width,textSize.height+30)];
+    [newsContent setFrame:CGRectMake(newsContent.frame.origin.x,newsContent.frame.origin.y,newsContent.frame.size.width,textSize.height+30)];
     [newsContent setShowsVerticalScrollIndicator:NO];
     [newsContent setEditable:NO];
     [myScroller setMaximumZoomScale:1];
@@ -87,7 +96,7 @@
     [myScroller setShowsVerticalScrollIndicator:NO];
     [myScroller setScrollEnabled:YES];
     [myScroller setPagingEnabled:YES];
-    [myScroller setContentSize:CGSizeMake(myScroller.frame.size.width, newsContent.frame.size.height+newsTitle.frame.size.height)];
+    [myScroller setContentSize:CGSizeMake(myScroller.frame.size.width, myScroller.frame.size.height)];
     }
 
 - (void)didReceiveMemoryWarning {
@@ -99,7 +108,7 @@
 -(BOOL)isLocalData{
     //NSLog(@"titlename%@",titleName);
     NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"RecentlyNews"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:myEntimty];
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"newsTitle == %@",titleName];
     [fetchRequest setPredicate:predicate];
     
@@ -127,6 +136,26 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)selectModule{
+    
+    if([tag isEqual:@"news1"]||(tag == nil)){
+        module = @"module1";
+        myEntimty = @"RecentlyNews";
+    }else if([tag isEqual:@"news2"]){
+        module = @"module2";
+        myEntimty = @"SchoolEmploy";
+    }else if([tag isEqual:@"news3"]){
+        module = @"module3";
+        myEntimty = @"OnlineEmploy";
+    }else if([tag isEqual:@"news4"]){
+        module = @"module4";
+        myEntimty = @"PractiseEmploy";
+    }else if([tag isEqual:@"local"]){
+        module = @"module5";
+        myEntimty = @"CollectionNews";
+    }
+}
+
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return nil;
@@ -148,4 +177,44 @@
     //NSLog(@"Did begin dragging");
 }
 
+- (IBAction)saveNews:(id)sender {
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"CollectionNews"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"newsTitle == %@",titleName];
+    [fetchRequest setPredicate:predicate];
+    NSArray *news = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    if (news.count == 0) {
+        NSManagedObject *newRecentlyNews = [NSEntityDescription insertNewObjectForEntityForName:@"CollectionNews" inManagedObjectContext:managedObjectContext];
+        [newRecentlyNews setValue:titleName forKey:@"newsTitle"];
+        [newRecentlyNews setValue:publishTime forKey:@"newsPublishTime"];
+        [newRecentlyNews setValue:newsContent.text forKey:@"newsContent"];
+        //[newRecentlyNews setValue:[obj objectForKey:@"playerName"] forKey:@"newsContent"];
+        NSError *error = nil;
+        if (![managedObjectContext save:&error]) {
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"友情提示"
+                                      message:@"发生意外(☆_☆)"
+                                      delegate:self cancelButtonTitle:@"关闭"
+                                      otherButtonTitles:nil, nil];
+            [alertView show];
+        }else{
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"友情提示"
+                                      message:@"保存成功Y(^_^)Y"
+                                      delegate:self cancelButtonTitle:@"关闭"
+                                      otherButtonTitles:nil, nil];
+            [alertView show];
+
+        }
+    }else{
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"友情提示"
+                                  message:@"重复保存哦，亲(☆_☆)"
+                                  delegate:self cancelButtonTitle:@"关闭"
+                                  otherButtonTitles:nil, nil];
+        [alertView show];
+
+    }
+}
 @end
