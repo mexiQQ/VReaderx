@@ -3,7 +3,6 @@
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -107,10 +106,10 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-g5-bNX">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDj-g5-bNX">
                                         <rect key="frame" x="10" y="65" width="300" height="495"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                                     </textView>
@@ -127,7 +126,6 @@
                                     <constraint firstItem="BDj-g5-bNX" firstAttribute="top" secondItem="7XK-Vo-9H3" secondAttribute="bottom" constant="15" id="PNM-8k-3RB"/>
                                     <constraint firstItem="sZb-Ts-mf2" firstAttribute="leading" secondItem="UAu-JT-wtb" secondAttribute="leading" constant="150" id="Qlc-r9-f8F"/>
                                     <constraint firstItem="sZb-Ts-mf2" firstAttribute="top" secondItem="UAu-JT-wtb" secondAttribute="top" constant="303" id="SfE-cG-WhV"/>
-                                    <constraint firstItem="BDj-g5-bNX" firstAttribute="bottom" secondItem="UAu-JT-wtb" secondAttribute="bottomMargin" id="XvR-u0-jI6"/>
                                     <constraint firstAttribute="trailing" secondItem="7XK-Vo-9H3" secondAttribute="trailing" constant="60" id="cs9-z3-zlM"/>
                                     <constraint firstItem="BDj-g5-bNX" firstAttribute="leading" secondItem="UAu-JT-wtb" secondAttribute="leading" constant="10" id="qwG-bF-lBV"/>
                                     <constraint firstAttribute="trailing" secondItem="BDj-g5-bNX" secondAttribute="trailing" constant="10" id="tUT-11-MZP"/>
@@ -205,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </mapView>
                     <navigationItem key="navigationItem" title="Map" id="3AA-T3-Oi6">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="0Cm-Ub-RIS"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="0Cm-Ub-RIS"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Na4-7Y-fE6">
                             <connections>
                                 <action selector="openAppleMapApp:" destination="IHS-Te-pvE" id="QYg-ZC-IJq"/>
@@ -277,7 +275,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="校车查询" id="KbI-f5-Z2j">
-                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" style="plain" id="Inx-Wl-XPE"/>
+                        <barButtonItem key="leftBarButtonItem" image="reveal-icon.png" id="Inx-Wl-XPE"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -334,7 +332,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="21-skull.png" translatesAutoresizingMaskIntoConstraints="NO" id="nA6-X5-oI4">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="nA6-X5-oI4">
                                             <rect key="frame" x="32" y="9" width="25" height="25"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最新动态" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZX-TO-Kfq">
@@ -386,7 +384,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="28-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Wa-Wj-Sby">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="online.png" translatesAutoresizingMaskIntoConstraints="NO" id="6Wa-Wj-Sby">
                                             <rect key="frame" x="32" y="9" width="25" height="25"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="在线招聘" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwB-Bd-d5p">
@@ -438,7 +436,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="31-ipod.png" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-EJ-mHE">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="28-star.png" translatesAutoresizingMaskIntoConstraints="NO" id="MQn-EJ-mHE">
                                             <rect key="frame" x="32" y="9" width="25" height="25"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我的收藏" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-ia-HXs">
@@ -464,7 +462,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="21-skull.png" translatesAutoresizingMaskIntoConstraints="NO" id="eRc-1X-DaA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="38-airplane.png" translatesAutoresizingMaskIntoConstraints="NO" id="eRc-1X-DaA">
                                             <rect key="frame" x="32" y="9" width="25" height="25"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="校车查询" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb2-7O-aDe">
@@ -490,7 +488,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="24-gift.png" translatesAutoresizingMaskIntoConstraints="NO" id="SY1-Hn-8xz">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map.png" translatesAutoresizingMaskIntoConstraints="NO" id="SY1-Hn-8xz">
                                             <rect key="frame" x="32" y="9" width="25" height="25"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="地图显示" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta8-Lm-ZFp">
@@ -575,7 +573,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temple.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-6Q-9jk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-180.png" translatesAutoresizingMaskIntoConstraints="NO" id="vnb-6Q-9jk">
                                 <rect key="frame" x="110" y="91" width="100" height="100"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a9l-iE-fhR">
@@ -834,14 +832,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="21-skull.png" width="22" height="24"/>
         <image name="24-gift.png" width="22" height="26"/>
         <image name="28-star.png" width="26" height="26"/>
         <image name="29-heart.png" width="24" height="21"/>
         <image name="31-ipod.png" width="17" height="29"/>
+        <image name="38-airplane.png" width="22" height="24"/>
+        <image name="home.png" width="30" height="25"/>
+        <image name="icon-180.png" width="180" height="180"/>
+        <image name="map.png" width="25" height="25"/>
+        <image name="online.png" width="26" height="22"/>
         <image name="reveal-icon.png" width="22" height="17"/>
         <image name="right_button.png" width="32" height="32"/>
-        <image name="temple.jpeg" width="180" height="180"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -849,7 +850,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oFU-M6-ZmG"/>
-        <segue reference="06x-iC-rhU"/>
+        <segue reference="wHx-ql-aG3"/>
+        <segue reference="XsU-lJ-ajs"/>
     </inferredMetricsTieBreakers>
 </document>

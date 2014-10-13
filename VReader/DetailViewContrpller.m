@@ -39,11 +39,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self selectModule];
     newsTitle.text = titleName;
     [myprogress setHidesWhenStopped:YES];
     [myprogress startAnimating];
-    
+    [self selectModule];
     if(![self isLocalData])
     {
         BmobQuery  *bquery = [BmobQuery queryWithClassName:module];
@@ -83,12 +82,6 @@
 
 -(void)changeFrameSizeOfTextView{
     [myprogress stopAnimating];
-    NSString *desContent = newsContent.text;
-    CGSize  textSize = [desContent sizeWithFont:[UIFont systemFontOfSize:14] constrainedToSize:CGSizeMake(240, 2000) lineBreakMode:NSLineBreakByWordWrapping];
-    
-    //[newsContent setContentSize:CGSizeMake(newsContent.frame.size.width,textSize.height+20)];
-    
-    [newsContent setFrame:CGRectMake(newsContent.frame.origin.x,newsContent.frame.origin.y,newsContent.frame.size.width,textSize.height+30)];
     [newsContent setShowsVerticalScrollIndicator:NO];
     [newsContent setEditable:NO];
     [myScroller setMaximumZoomScale:1];
@@ -96,7 +89,6 @@
     [myScroller setShowsVerticalScrollIndicator:NO];
     [myScroller setScrollEnabled:YES];
     [myScroller setPagingEnabled:YES];
-    [myScroller setContentSize:CGSizeMake(myScroller.frame.size.width, myScroller.frame.size.height)];
     }
 
 - (void)didReceiveMemoryWarning {
