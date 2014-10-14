@@ -60,7 +60,7 @@
 		AF78A7C419EAE283000F7D73 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = AF78A7C219EAE283000F7D73 /* map.png */; };
 		AF78A7C519EAE283000F7D73 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF78A7C319EAE283000F7D73 /* map@2x.png */; };
 		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
-		AFBA049619E1819600DB8B72 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBA049519E1819600DB8B72 /* BmobSDK.framework */; };
+		AFA87A8319ED5E0100B6D167 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA87A8219ED5E0100B6D167 /* BmobSDK.framework */; };
 		AFDC8F0C19E79B9D00B36663 /* CollectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */; };
 		AFDC8F0F19E7BCF600B36663 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC8F0E19E7BCF600B36663 /* QuestionViewController.m */; };
 /* End PBXBuildFile section */
@@ -132,7 +132,7 @@
 		AF78A7C319EAE283000F7D73 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
-		AFBA049519E1819600DB8B72 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		AFA87A8219ED5E0100B6D167 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		AFDC8F0A19E79B9D00B36663 /* CollectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionTableViewController.h; path = VReader/CollectionTableViewController.h; sourceTree = SOURCE_ROOT; };
 		AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionTableViewController.m; path = VReader/CollectionTableViewController.m; sourceTree = SOURCE_ROOT; };
 		AFDC8F0D19E7BCF600B36663 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = VReader/QuestionViewController.h; sourceTree = SOURCE_ROOT; };
@@ -149,10 +149,10 @@
 				AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */,
 				AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */,
 				AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */,
+				AFA87A8319ED5E0100B6D167 /* BmobSDK.framework in Frameworks */,
 				AF61205D19DD2BC300986CE1 /* MobileCoreServices.framework in Frameworks */,
 				AF61205B19DD2BB600986CE1 /* Security.framework in Frameworks */,
 				AF61205919DD2BAB00986CE1 /* CoreLocation.framework in Frameworks */,
-				AFBA049619E1819600DB8B72 /* BmobSDK.framework in Frameworks */,
 				AF61205719DD2B9300986CE1 /* CoreGraphics.framework in Frameworks */,
 				AF61205619DD2B8B00986CE1 /* Foundation.framework in Frameworks */,
 				AF61205519DD2B8000986CE1 /* UIKit.framework in Frameworks */,
@@ -187,8 +187,8 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFA87A8219ED5E0100B6D167 /* BmobSDK.framework */,
 				AF662A6E19E3A818009B6C67 /* CoreData.framework */,
-				AFBA049519E1819600DB8B72 /* BmobSDK.framework */,
 				AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */,
 				AF61206019DD2BD900986CE1 /* CoreTelephony.framework */,
 				AF61205E19DD2BCF00986CE1 /* CFNetwork.framework */,
