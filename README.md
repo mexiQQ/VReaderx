@@ -16,7 +16,6 @@
 ![](http://mexiqq.qiniudn.com/VReader-1.png)
 ![](http://mexiqq.qiniudn.com/VReader-3.png)
 ![](http://mexiqq.qiniudn.com/VReader-2.png)
-![](http://mexiqq.qiniudn.com/VReader-4.png)
 
 使用方法：
 
