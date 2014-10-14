@@ -21,7 +21,8 @@
 使用方法：
 
 ###(一)建立服务器：
-- 注册Bomb账号（附链接：http://www.bmob.cn/activity/redirect/?sid=b2a3391014f40dd92252），并建立应用。
+- 注册Bomb账号(附链接：http://www.bmob.cn/activity/redirect/?sid=b2a3391014f40dd92252)
+- 云端建立自己的APP
 - 在数据浏览模块新建数据表，分别如下：
 
 | 模块        | 数据库表           | 表中字段  |
@@ -53,6 +54,7 @@ OK，准备完成，Command+B Command+R开始运行吧
 
 ###(三)自我定制
 
-新闻模块可添加和删除，富类模块自己可以定义，只要你会使用MystoryBoard，完全可以做更棒的界面。
+新闻模块可添加和删除，富类模块自己可以定义，只要你会使用MystoryBoard，完全可以自我定制界面。
 
-编写时的一些想法：http://www.mexiqq.com/2014/10/11/%E4%B8%80%E6%AC%BE%E6%96%B0%E9%97%BB%E7%B1%BBiOS-APP%E7%9A%84%E8%AF%9E%E7%94%9F%E8%BF%87%E7%A8%8B/
+编写时的一些想法：
+http://www.mexiqq.com/2014/10/11/%E4%B8%80%E6%AC%BE%E6%96%B0%E9%97%BB%E7%B1%BBiOS-APP%E7%9A%84%E8%AF%9E%E7%94%9F%E8%BF%87%E7%A8%8B/
