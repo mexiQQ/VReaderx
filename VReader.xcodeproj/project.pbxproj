@@ -60,9 +60,9 @@
 		AF78A7C419EAE283000F7D73 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = AF78A7C219EAE283000F7D73 /* map.png */; };
 		AF78A7C519EAE283000F7D73 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF78A7C319EAE283000F7D73 /* map@2x.png */; };
 		AF7FCBAB19E0410A00F5BE74 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */; };
-		AFA87A8319ED5E0100B6D167 /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA87A8219ED5E0100B6D167 /* BmobSDK.framework */; };
 		AFDC8F0C19E79B9D00B36663 /* CollectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */; };
 		AFDC8F0F19E7BCF600B36663 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDC8F0E19E7BCF600B36663 /* QuestionViewController.m */; };
+		AFDE85F919EFB3750010288B /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFDE85F419EFAB2A0010288B /* BmobSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,11 +132,11 @@
 		AF78A7C319EAE283000F7D73 /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
 		AF7FCBA919E0410A00F5BE74 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = VReader/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		AF7FCBAA19E0410A00F5BE74 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = VReader/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
-		AFA87A8219ED5E0100B6D167 /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		AFDC8F0A19E79B9D00B36663 /* CollectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionTableViewController.h; path = VReader/CollectionTableViewController.h; sourceTree = SOURCE_ROOT; };
 		AFDC8F0B19E79B9D00B36663 /* CollectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionTableViewController.m; path = VReader/CollectionTableViewController.m; sourceTree = SOURCE_ROOT; };
 		AFDC8F0D19E7BCF600B36663 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = VReader/QuestionViewController.h; sourceTree = SOURCE_ROOT; };
 		AFDC8F0E19E7BCF600B36663 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = VReader/QuestionViewController.m; sourceTree = SOURCE_ROOT; };
+		AFDE85F419EFAB2A0010288B /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,12 +144,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFDE85F919EFB3750010288B /* BmobSDK.framework in Frameworks */,
 				AF61205419DD2B7900986CE1 /* MapKit.framework in Frameworks */,
 				AF662A6F19E3A818009B6C67 /* CoreData.framework in Frameworks */,
 				AF61206319DD2BE300986CE1 /* SystemConfiguration.framework in Frameworks */,
 				AF61206119DD2BD900986CE1 /* CoreTelephony.framework in Frameworks */,
 				AF61205F19DD2BCF00986CE1 /* CFNetwork.framework in Frameworks */,
-				AFA87A8319ED5E0100B6D167 /* BmobSDK.framework in Frameworks */,
 				AF61205D19DD2BC300986CE1 /* MobileCoreServices.framework in Frameworks */,
 				AF61205B19DD2BB600986CE1 /* Security.framework in Frameworks */,
 				AF61205919DD2BAB00986CE1 /* CoreLocation.framework in Frameworks */,
@@ -187,7 +187,7 @@
 		01FB8668169E2D8B00A0A1A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AFA87A8219ED5E0100B6D167 /* BmobSDK.framework */,
+				AFDE85F419EFAB2A0010288B /* BmobSDK.framework */,
 				AF662A6E19E3A818009B6C67 /* CoreData.framework */,
 				AF61206219DD2BE300986CE1 /* SystemConfiguration.framework */,
 				AF61206019DD2BD900986CE1 /* CoreTelephony.framework */,
@@ -471,15 +471,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					/Users/liwenqian/Desktop/VReader/Bmob_SDK_iOS_v1.4.6,
-				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VReader/VReader-Prefix.pch";
 				INFOPLIST_FILE = "VReader/VReader-Info.plist";
 				PRODUCT_NAME = VReader;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -490,16 +488,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					/Users/liwenqian/Desktop/VReader/Bmob_SDK_iOS_v1.4.6,
-				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VReader/VReader-Prefix.pch";
 				INFOPLIST_FILE = "VReader/VReader-Info.plist";
 				PRODUCT_NAME = VReader;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

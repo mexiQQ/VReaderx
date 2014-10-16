@@ -51,7 +51,7 @@
         [bquery whereKey:@"publishTime" equalTo:publishTime];
         [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
             BmobObject *bomb = [array objectAtIndex:0];
-            [newsContent setText:[[bomb objectForKey:@"content"] stringByReplacingOccurrencesOfString:@"/n" withString:@"\n"]];
+            [newsContent setText:[bomb objectForKey:@"content"]];
             [NSThread detachNewThreadSelector:@selector(saveContent:) toTarget:self withObject:bomb];
             [self performSelector:@selector(changeFrameSizeOfTextView) withObject:nil afterDelay:0];
         }];
